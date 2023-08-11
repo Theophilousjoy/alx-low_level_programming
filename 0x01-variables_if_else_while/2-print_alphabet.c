@@ -1,22 +1,17 @@
-#include <time.h>
-#include <stdlib.h>
 #include <stdio.h>
 #include <type.h>
 
 /**
- * main - A program that prints alphabets(LowerCase) followed by a new line
- *
- * Return : 0 (True)
- */
+   * main - A program that prints alphabets in lower case
+   *
+   * Return: zero
+   */
 int main(void)
 {
-	char cha = 'a';
+	char  alphabet= 'a';
 
-       for (cha = 'a'; cha <= 'z'; cha++)
-       {
-	       putchar(cha);
-       }
-       putchar('\n');
-
-       return (0);
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+		putchar(alphabet);
+		putchar('\n');
+	return (0);
 }
