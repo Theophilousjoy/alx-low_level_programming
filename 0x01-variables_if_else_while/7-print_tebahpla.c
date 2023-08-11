@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
-* main - A program that print alphabet in small letter followed by new line
+* main - A program that prints small lettered alphabet  in reverse followed by new line
 *
 * Return: 0 (True)
 */
 int main(void)
 {
 	int alph;
-	
-	for (alph = 'a'; alph <= 'z'; alph++)
+
+	for (alph = 'z'; alph >= 'a'; alph--)
 	{
-		alph = tolower(alph);
 		putchar(alph);
 	}
 	putchar('\n');
