@@ -2,14 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 /**
-*main - A program for whether var n is positive or negative 
+*main - A program for whether var n is positive or negative
 *
 *Return: 0 (True)
 */
 int main(void)
 {
 int n;
-
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 if (n == 0)
