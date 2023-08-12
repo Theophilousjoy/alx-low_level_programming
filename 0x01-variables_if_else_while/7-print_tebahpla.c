@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
-* main - A program that prints small lettered alphabet  in reverse followed by new line
+* main - main entry
 *
 * Return: 0 (True)
 */

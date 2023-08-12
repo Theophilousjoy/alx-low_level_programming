@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
-* main - A program that prints alphabets in small letter, then capital letters and followed by new line.
+* main - main entry
 *
 * Return: 0 (True)
 */

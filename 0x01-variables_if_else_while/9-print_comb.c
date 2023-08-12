@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
-* main - A program that prints all single digits with, and space followed by new line
+* main - main entry
 *
 * Return: 0 (True)
 */
@@ -11,12 +11,12 @@ int main(void)
 
 	for (num = '0'; num <= '9'; num++)
 	{
-	putchar(num);
-	if (num == '9')
-	continue;
+		putchar(num);
+		if (num == '9')
+			continue;
 
-	putchar(',');
-	putchar(' ');
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
