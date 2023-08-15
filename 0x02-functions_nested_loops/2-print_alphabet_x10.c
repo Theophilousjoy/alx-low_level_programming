@@ -4,7 +4,8 @@
  *
  * Return: 0 (True)
  */
-void print_alphabet_x10(void)
+void print_alphabet_x10 (void)
+
 {
 	int num = 0;
 	int alph;
