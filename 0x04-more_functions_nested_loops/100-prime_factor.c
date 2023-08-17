@@ -14,7 +14,7 @@ int main(void)
 
 	while (pf++ < num / 2)
 	{
-		if (num % inc == 0)
+		if (num % pf == 0)
 		{
 			num /= 2;
 			continue;
