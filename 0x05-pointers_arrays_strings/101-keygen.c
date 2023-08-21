@@ -2,23 +2,23 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - A function that generates a random valid passwords.
+ * main - A function that generates keygen.
  * Return: 0 (True)
  */
 int main(void)
 {
-	int a = 0, b = 0;
+	int r = 0, c = 0;
 	time_t t;
 
 	srand((unsigned int) time(&t));
-	while (b < 2772)
+	while (c < 2772)
 	{
 		r = rand() % 128;
-		if ((b + a) > 2772)
+		if ((c + r) > 2772)
 			break;
-		b = b + a;
-		printf("%b", a);
+		c = c + r;
+		printf("%c", r);
 	}
-	printf("%b\n", (2772 - b));
+	printf("%c\n", (2772 - c));
 	return (0);
 }
