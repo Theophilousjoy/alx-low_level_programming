@@ -1,12 +1,10 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
-* main - Main entry point
-*
-* Description: the program's description
-*
-* Return: Always 0 (Success)
-*/
+ * main -  A function or program that prints a[2]=98
+ *
+ * Return: 0 (True)
+ */
 int main(void)
 {
 	int n;
@@ -15,16 +13,16 @@ int main(void)
 
 	a[2] = 1024;
 	p = &n;
-	/*
-	 * Your lines of code to be written here...
-	 * Note:
-	 * - you are not allowed to use a
-	 * - you are not allowed to modify p
-	 * - only one statement is allowed
-	 * - you are not allowed to code anything else than this line of code
-	 */
-	*(p + 5) = 98;
-	/* ...so that this prints 98\n */
+/*
+ * write your line of code here...
+ * Note:
+ * - you are not allowed to use a
+ * - you are not allowed to modify p
+ * - only one statement
+ * - you are not allowed to code anything else than this line of code
+ */
+	p[5] = 98;
+/* ...so that this prints 98\n */
 	printf("a[2] = %d\n", a[2]);
 	return (0);
 }

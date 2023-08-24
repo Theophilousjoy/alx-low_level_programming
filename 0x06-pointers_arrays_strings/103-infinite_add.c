@@ -1,27 +1,51 @@
 #include "main.h"
 /**
- * rot13 - A function that encodes a string in rot13
- * @s: string to be encoded
- * Return: the string being encoded
+ * infinite_add -  A function or program that adds two numbers
+ * @n1: first numb
+ * @n2: second numb
+ * @r: the result
+ * @size_r: result size
+ * Return: Print Sum
  */
-char *rot13(char *s)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a;
-	int b;
+	/* variable declaration */
+	int a = 0, b = 0, c, d = 0, e, f, g = 0;
 
-	char x[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char y[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
-	for (a = 0; s[a] != '\0'; a++)
+	while (n1[a] != '\0')
+		a++;
+	while (n2[b] != '\0')
+		b++;
+	if (a > b)
+		d = a;
+	else
+		d = b;
+	if (d + 1 > size_r)
+		return (0);
+	r[d] = '\0';
+	for (c = d - 1 ; c >= 0 ; c--)
 	{
-		for (b = 0; x[b] != '\0'; b++)
-		{
-			if (s[a] == x[b])
-			{
-				s[a] = y[b];
-				break;
-			}
-		}
+		a--;
+		b--;
+		if (a >= 0)
+			e = n1[a] - '0';
+		else
+			e = 0;
+		if (b >= 0)
+			f = n2[b] - '0';
+		else
+			f = 0;
+		r[c] = (e + f + g) % 10 + '0';
+		g = (e + f + g) / 10;
 	}
-	return (s);
+	if (g == 1)
+	{
+		r[c + 1] = '\0';
+		if (c + 2 > size_r)
+			return (0);
+		while (c-- >= 0)
+			r[c + 1] = r[c];
+		r[0] = g + '0';
+	}
+	return (r);
 }
