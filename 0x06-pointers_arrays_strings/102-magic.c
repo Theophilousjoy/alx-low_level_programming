@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * main -  A function or program that prints a[2]=98
  *
@@ -15,7 +14,7 @@ int main(void)
 	p = &n;
 /*
  * write your line of code here...
- * Note:
+ * Remember:
  * - you are not allowed to use a
  * - you are not allowed to modify p
  * - only one statement

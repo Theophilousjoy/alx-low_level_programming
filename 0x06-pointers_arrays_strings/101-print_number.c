@@ -1,3 +1,5 @@
+#include "main.h"
+#include <stdio.h>
 /**
  * print_number - A program that prints an integer.
  *
