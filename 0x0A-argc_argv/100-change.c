@@ -40,9 +40,9 @@ int main(int argc, char *argv[])
 			cents -= 4;
 			continue;
 		}
-		if ((cents - 4) >= 0)
+		if ((cents - 2) >= 0)
 		{
-			cents -= 4;
+			cents -= 2;
 			continue;
 		}
 		cents--;

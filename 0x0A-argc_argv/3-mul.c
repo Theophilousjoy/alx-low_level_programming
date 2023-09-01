@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	y = atoi(argv[2]);
 	product = x * y;
 
-	printf("%d\n", prod);
+	printf("%d\n", product);
 
 	return (0);
 }
