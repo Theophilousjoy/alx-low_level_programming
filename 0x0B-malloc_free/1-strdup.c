@@ -6,7 +6,7 @@
  * space in memory.
  * @str: string
  *
- * Return: array of char
+ * Return: array of chars
  */
 char *_strdup(char *str)
 {
@@ -22,5 +22,5 @@ char *_strdup(char *str)
 		return (NULL);
 	for (y = 0; y <= x; y++)
 		otstr[y] = str[y];
-	return (otstr);
+	return (str);
 }
