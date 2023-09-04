@@ -9,7 +9,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *aoc;
-	unsigned int x;
+	unsigned int i;
 
 	if (size == 0)
 		return (NULL);
@@ -19,8 +19,8 @@ char *create_array(unsigned int size, char c)
 	if (aoc == NULL)
 		return (NULL);
 
-	for (x = 0; x < size; x++)
-		aoc[x] = c;
+	for (i = 0; i < size; i++)
+		aoc[i] = c;
 
 	return (aoc);
 }
