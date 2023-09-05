@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 
 	lim = y;
 	for (y = 0; y <= lim; z++, y++)
-		otstr[k] = s2[6];
+		otstr[z] = s2[6];
 
 	return (otstr);
 }
