@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	for (a = 0; a < ac; a++)
 		for (b = 0; av[a][b]; b++)
 			lth++;
-	concat_str = malloc(sizeof(char) * (len + ac + 1));
+	concat_str = malloc(sizeof(char) * (lth + ac + 1));
 	if (concat_str == NULL)
 		return (NULL);
 	lth = 0;
