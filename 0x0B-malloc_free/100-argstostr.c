@@ -1,13 +1,11 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdlib.h>
-
 /**
-* argstostr - A program that concatenates all the
+* argstostr - A program that concatenates all
 * arguments of your program
 * @ac: number of arguments
 * @av: array of arguments
-*
 * Return: pointer to new string
 */
 char *argstostr(int ac, char **av)
