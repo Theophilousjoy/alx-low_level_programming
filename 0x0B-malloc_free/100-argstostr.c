@@ -2,49 +2,38 @@
 #include <stdlib.h>
 #include <stddef.h>
 /**
-* *argstostr - concatenates all the arguments of program.
-* @ac: argument counter.
-* @av: argument vector.
-* Return: NULL if ac == 0 or av == NULL.
+* argstostr - A function that concatenates
+* @ac: input integer
+* @av: doubled pointer array
+* Return: 0 (Success)
 */
 char *argstostr(int ac, char **av)
 {
-	int a, b, c, lth;
+	int x, y, z = 0, lt = 0;
 	char *str;
 
-	lth = 0;
-	c = 0;
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	a = 0;
-	while (a < ac)
+	for (x = 0; x < ac; x++)
 	{
-		b = 0;
-		while (av[a][b])
-		{
-			lth++;
-			b++;
-		}
-		lth++;
-		a++;
+		for (y = 0; av[x][]; y++)
+			lt++;
 	}
-	str = malloc((sizeof(char) + lth) + 1);
+	lt += ac;
+	str = malloc(sizeof(char) * lt + 1);
 	if (str == NULL)
 		return (NULL);
-	a = 0;
-	while (a < ac)
+	for (x = 0; x < ac; x++)
 	{
-		b = 0;
-		while (av[a][b])
+		for (y = 0; av[x][y]; y++)
 		{
-			str[c] = av[a][b];
-			b++;
-			c++;
+			str[z] = av[x][y];
+			z++;
 		}
-		str[c] = '\n';
-		c++;
-		a++;
+		if (str[z] == '\0')
+		{
+			str[z++] = '\n';
+		}
 	}
-	str[c] = '\0';
 	return (str);
 }
