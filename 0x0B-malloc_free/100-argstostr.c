@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
 * argstostr - a function that concatenates all the arguments of your program
@@ -10,13 +12,13 @@
 char *argstostr(int ac, char **av)
 {
 	char *concat_str = NULL;
-	int k = 0, a = ac, b, sums = 0, tmp = 0;
+	int k = 0, a = ac, b, sums = 0, tmp = 0 len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	while (ac--)
-		sums += (mblen(av[ac]) + 1);
+		sums += (len(av[ac]) + 1);
 	concat_str = (char *) malloc(sums + 1);
 
 	if (concat_str != NULL)
