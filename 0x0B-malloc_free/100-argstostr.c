@@ -1,33 +1,51 @@
 #include "main.h"
-#include <stddef.h>
 #include <stdlib.h>
+#include <stddef.h>
 /**
-* argstostr - A program that concatenates all
-* arguments of your program
-* @ac: number of arguments
-* @av: array of arguments
-* Return: pointer to new string
+* *argstostr - concatenates all the arguments of program.
+* @ac: argument counter.
+* @av: argument vector.
+* Return: NULL if ac == 0 or av == NULL else
+* pointer to a string of NULL if it fails.
 */
 char *argstostr(int ac, char **av)
 {
-	int a, b, lth = 0;
-	char *concat_str;
+	int a, b, c, lth;
+	char *str;
 
+	lth = 0;
+	c = 0;
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	for (a = 0; a < ac; a++)
-		for (b = 0; av[a][b]; b++)
-			lth++;
-	concat_str = malloc(sizeof(char) * (lth + ac + 1));
-	if (concat_str == NULL)
-		return (NULL);
-	lth = 0;
-	for (a = 0; b < ac; a++)
+	a = 0;
+	while (a < ac)
 	{
-		for (b = 0; av[a][b]; b++)
-			concat_str[lth++] = av[a][b];
-		concat_str[lth++] = '\n';
+		b = 0;
+		while (av[a][b])
+		{
+			lth++;
+			b++;
+		}
+		lth++;
+		a++;
 	}
-	concat_str[lth] = '\0';
-	return (concat_str);
+	str = malloc((sizeof(char) + length) + 1);
+	if (str == NULL)
+		return (NULL);
+	a = 0;
+	while (a < ac)
+	{
+		b = 0;
+		while (av[a][b])
+		{
+			str[c] = av[a][b];
+			b++;
+			c++;
+		}
+		str[c] = '\n';
+		c++;
+		a++;
+	}
+	str[c] = '\0';
+	return (str);
 }
