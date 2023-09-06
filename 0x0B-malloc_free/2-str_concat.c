@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
 * str_concat - A program that concatenates two strings.
