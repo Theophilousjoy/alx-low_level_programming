@@ -51,7 +51,7 @@ int len(char *str)
 
 	if (str != NULL)
 	{
-		while (str[l])
+		while (str[len])
 			len++;
 	}
 	return (len);
