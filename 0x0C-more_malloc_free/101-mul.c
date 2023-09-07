@@ -54,14 +54,14 @@ void errors(void)
 */
 int main(int argc, char *argv[])
 {
-	char *n1, *n2;
+	char *s1, *s2;
 	int l1, l2, l, x, pick, dgt1, dgt2, *result, y = 0;
 
-	n1 = argv[1], n2 = argv[2];
-	if (argc != 3 || !is_digit(n1) || !is_digit(n2))
+	s1 = argv[1], s2 = argv[2];
+	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
-	l1 = _strlen(n1);
-	l2 = _strlen(n2);
+	l1 = _strlen(s1);
+	l2 = _strlen(s2);
 	l = l1 + l2 + 1;
 	result = malloc(sizeof(int) * l);
 	if (!result)
@@ -70,11 +70,11 @@ int main(int argc, char *argv[])
 		result[x] = 0;
 	for (l1 = l1 - 1; l1 >= 0; l1--)
 	{
-		dgt1 = n1[l1] - '0';
+		dgt1 = s1[l1] - '0';
 		pick = 0;
-		for (l2 = _strlen(n2) - 1; l2 >= 0; l2--)
+		for (l2 = _strlen(2) - 1; l2 >= 0; l2--)
 		{
-			dgt2 = n2[l2] - '0';
+			dgt2 = s2[l2] - '0';
 			pick += result[l1 + l2 + 1] + (dgt1 * dgt2);
 			result[l1 + l2 + 1] = pick % 10;
 			pick /= 10;
@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
 			y = 1;
 	}
 		if (y)
-			_putchar(result[x] + '0')
+			_putchar(result[x] + '0');
 	}
 	if (!y)
 		_putchar('0');
