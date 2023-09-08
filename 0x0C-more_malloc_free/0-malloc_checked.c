@@ -12,7 +12,6 @@ void *malloc_checked(unsigned int b)
 	void *blocked;
 
 	blocked = malloc(b);
-
 	if (blocked == NULL)
 		exit(98);
 	return (blocked);
