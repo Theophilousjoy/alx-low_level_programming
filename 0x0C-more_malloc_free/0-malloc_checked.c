@@ -8,7 +8,7 @@
  * Return: pointer to the allocated memory address
  */
 
-int main(void) *malloc_checked(unsigned int b)
+void *malloc_checked(unsigned int b)
 {
 	void *block;
 	
