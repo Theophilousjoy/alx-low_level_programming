@@ -5,7 +5,7 @@
  * malloc_checked - A program that allocates memory using malloc
  * @b: number of bytes to be allocated
  *
- * Return: pointer to the allocated memory
+ * Return: pointer to the allocated memory address
  */
 void *malloc_checked(unsigned int b)
 {
@@ -17,3 +17,4 @@ void *malloc_checked(unsigned int b)
 	return (blocked);
 
 }
+
