@@ -3,7 +3,7 @@
 
 
 /**
-* *malloc_checked - A program that allocates memory using malloc
+* malloc_checked - A program that allocates memory using malloc
 * @b: number of bytes to be allocated
 *
 * Return: allocated memory pointer

@@ -22,7 +22,7 @@ int is_digit(char *s)
 	return (1);
 }
 /**
-* _strlen - Aprogram that returns the length of a string
+* _strlen - A program that returns the length of a string
 * @s: string to be evaluated
 *
 * Return: length of the string
@@ -32,8 +32,7 @@ int _strlen(char *s)
 	int x = 0;
 
 	while (s[x] != '\0')
-	{
-		x++;
+	{x++;
 	}
 	return (x);
 }
@@ -55,44 +54,42 @@ void errors(void)
 int main(int argc, char *argv[])
 {
 	char *s1, *s2;
-	int l1, l2, l, x, pick, dgt1, dgt2, *result, y = 0;
+	int lgt1, lgt2, lgt, x, pick, dgt1, dgt2, *result, a = 0;
 
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
-	l1 = _strlen(s1);
-	l2 = _strlen(s2);
-	l = l1 + l2 + 1;
-	result = malloc(sizeof(int) * l);
+	lgt1 = _strlen(s1);
+	lgt2 = _strlen(s2);
+	lgt = lgt1 + lgt2 + 1;
+	result = malloc(sizeof(int) * lgt);
 	if (!result)
 		return (1);
-	for (x = 0; x <= l1 + l2; x++)
+	for (x = 0; x <= lgt1 + lgt2; x++)
 		result[x] = 0;
-	for (l1 = l1 - 1; l1 >= 0; l1--)
+	for (lgt1 = lgt1 - 1; lgt1 >= 0; lgt1--)
 	{
-		dgt1 = s1[l1] - '0';
+		dgt1 = s1[lgt1] - '0';
 		pick = 0;
-		for (l2 = _strlen(2) - 1; l2 >= 0; l2--)
+		for (lgt2 = _strlen(s2) - 1; lgt2 >= 0; lgt2--)
 		{
-			dgt2 = s2[l2] - '0';
-			pick += result[l1 + l2 + 1] + (dgt1 * dgt2);
-			result[l1 + l2 + 1] = pick % 10;
+			dgt2 = s2[lgt2] - '0';
+			pick += result[lgt1 + lgt2 + 1] + (dgt1 * dgt2);
+			result[lgt1 + lgt2 + 1] = pick % 10;
 			pick /= 10;
 		}
 		if (pick > 0)
-			result[l1 + l2 + 1] += pick;
+			result[lgt1 + lgt2 + 1] += pick;
 	}
-	for (x = 0; x < l - 1; x++)
+	for (x = 0; x < lgt - 1; x++)
 	{
 		if (result[x])
-			y = 1;
-	}
-		if (y)
+			a = 1;
+		if (a)
 			_putchar(result[x] + '0');
 	}
-	if (!y)
+	if (!a)
 		_putchar('0');
-		}
 	_putchar('\n');
 	free(result);
 	return (0);
