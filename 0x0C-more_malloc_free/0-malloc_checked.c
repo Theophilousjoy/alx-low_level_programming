@@ -1,6 +1,4 @@
-#include <stdlib.h>
 #include "main.h"
-
 
 /**
 * malloc_checked - A program that allocates memory using malloc
