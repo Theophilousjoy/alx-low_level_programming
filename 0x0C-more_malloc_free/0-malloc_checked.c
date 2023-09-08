@@ -15,6 +15,4 @@ void *malloc_checked(unsigned int b)
 	if (blocked == NULL)
 		exit(98);
 	return (blocked);
-
 }
-
