@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *all_m
 
-	alll_m = malloc(b);
+	all_m = malloc(b);
 	if (all_m == NULL)
 		exit(98);
 	return (all_m);
