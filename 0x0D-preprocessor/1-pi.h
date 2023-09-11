@@ -1,7 +1,7 @@
 #ifndef PI_H
 #define PI_H
 /**
-* main:macro PI
+* main - macro PI
 *
 * Desc: value for PI
 */
