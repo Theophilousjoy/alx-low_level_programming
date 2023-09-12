@@ -21,12 +21,12 @@ int  _strlen(char *str)
 */
 char *_strcpy(char *dest, char *src)
 {
-	int x = 0;
+	int y = 0;
 
-	while (src[x] != '\0')
+	while (src[y] != '\0')
 	{
-		dest[x] = src[x];
-		x++;
+		dest[y] = src[y];
+		y++;
 	}
 	return (dest);
 }
