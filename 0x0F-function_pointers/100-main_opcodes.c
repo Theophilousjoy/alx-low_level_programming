@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
 	{
 		if (x == list - 1)
 		{
-			printf("%02hhx\n", arr[x]);
+			printf("%02hhx\n", array[x]);
 			break;
 		}
-		printf("%02hhx ", arr[x]);
+		printf("%02hhx ", array[x]);
 	}
 	return (0);
 }
