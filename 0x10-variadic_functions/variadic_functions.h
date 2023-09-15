@@ -4,14 +4,19 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * struct printer - defines a print attributes
+ * Description: this structure defines a function
+ * that prints anything
+ */
 typedef struct printer
-/*struct printer - a new type of data*/
 {
 	char *symbol;
 	void (*print)(va_list arg);
 } printer_t;
 
-
+char *symbol;
+void (*print)(va_list arg);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
