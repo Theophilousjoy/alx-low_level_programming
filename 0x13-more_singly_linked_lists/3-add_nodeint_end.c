@@ -1,13 +1,10 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
 /**
  *add_nodeint_end - A function that adds a node to the end of a linked list
  *@head: pointer to the head of the linked list
  *@n: content number
- *
  *
  *Return: address of the newly added node
  */
