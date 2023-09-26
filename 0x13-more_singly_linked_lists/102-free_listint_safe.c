@@ -9,7 +9,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t nod = 0;
-	listint_t *temps = NULL, *loopn = NULL;
+	listint_t *temp = NULL, *loopn = NULL;
 
 	if (h == NULL)
 	{
@@ -20,17 +20,17 @@ size_t free_listint_safe(listint_t **h)
 
 	while (*h != NULL)
 	{
-		temps = (*h)->next;
+		temp = (*h)->next;
 		free(*h);
 		nod++;
 
-		if (temps >= loopn)
+		if (temp >= loopn)
 		{
 			break;
 		}
 
-		loopn = (loopnode == *h) ? temps : loopn;
-		*h = temps;
+		loopn = (loopnode == *h) ? temp : loopn;
+		*h = temp;
 	}
 
 	*h = NULL;
