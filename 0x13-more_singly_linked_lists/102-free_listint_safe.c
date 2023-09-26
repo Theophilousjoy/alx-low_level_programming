@@ -10,7 +10,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t lgth = 0;
-	int dist;
+	int dst;
 	listint_t *temps;
 
 	if (!h || !*h)
@@ -18,8 +18,8 @@ size_t free_listint_safe(listint_t **h)
 
 	while (*h)
 	{
-		dist = *h - (*h)->next;
-		if (dist > 0)
+		dst = *h - (*h)->next;
+		if (dst > 0)
 		{
 			temps = (*h)->next;
 			*h = temps;

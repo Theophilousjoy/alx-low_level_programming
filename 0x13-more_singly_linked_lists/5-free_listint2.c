@@ -2,26 +2,22 @@
 #include <stdlib.h>
 
 /**
-*free_listint2 - A program that frees a linked list
-*@head: pointer to the head of the list
-*
-*Return: void
-*/
+ * free_listint2 - Write a funtion that frees a list.
+ * @head: Address of the first node of a list.
+ *
+ * return: nothing to return
+ */
 
 void free_listint2(listint_t **head)
 {
-	listint_t *pts;
-	listint_t **frll = head;
+	listint_t *temps;
 
-	if (frll != NULL)
+	if (head == NULL)
+		return;
+	while (*head != NULL)
 	{
-		while (*head != NULL)
-
-		{
-			pts = *head;
-			free(pts);
-			*head = (*head)->next;
-		}
-		*frll = NULL;
+		temps = (*head)->next;
+		free(*head);
+		*head = temps;
 	}
 }
