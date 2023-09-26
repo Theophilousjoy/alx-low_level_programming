@@ -11,17 +11,17 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *pts;
-	listint_t **frllist = head;
+	listint_t **frll = head;
 
-	if (frllist != NULL)
+	if (frll != NULL)
 	{
 		while (*head != NULL)
 
 		{
-			cursor = *head;
+			pts = *head;
 			free(pts);
 			*head = (*head)->next;
 		}
-		*frllist = NULL;
+		*frll = NULL;
 	}
 }

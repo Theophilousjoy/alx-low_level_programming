@@ -12,34 +12,34 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *nwnode = NULL;
-	listint_t *prnode = NULL;
+	listint_t *nwn = NULL;
+	listint_t *prn = NULL;
 	unsigned int x = 0;
 
-	nwnode = malloc(sizeof(listint_t));
-	if (nwnode == NULL || idx > listint_len(*head))
+	nwn = malloc(sizeof(listint_t));
+	if (nwn == NULL || idx > listint_len(*head))
 	{
-		free(nwnode);
+		free(nwn);
 		return (NULL);
 	}
-	nwnode->n = n;
-	nwnode->next = NULL;
+	nwn->n = n;
+	nwn->next = NULL;
 	while (head != NULL)
 	{
 		if (x == idx)
 		{
 			if (x == 0)
 			{
-				nwnode->next = *head;
-				*head = nwnode;
-				return (nwnode);
+				nwn->next = *head;
+				*head = nwn;
+				return (nwn);
 			}
-			nwnode->next = prnode->next;
-			prnode->next = nwnode;
-			return (nwnode);
+			nwn->next = prn->next;
+			prn->next = nwn;
+			return (nwn);
 		}
 		else if ((x + 1) == idx)
-			prnode = *head;
+			prn = *head;
 		head = &((*head)->next);
 		x++;
 	}
@@ -55,12 +55,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 size_t listint_len(const listint_t *h)
 {
 	const listint_t *pts = h;
-	size_t display = 0;
+	size_t disp = 0;
 
 	while (pts != NULL)
 	{
-		display += 1;
+		disp += 1;
 		pts = pts->next;
 	}
-	return (display);
+	return (disp);
 }
