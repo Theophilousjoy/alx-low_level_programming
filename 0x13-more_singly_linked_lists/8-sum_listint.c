@@ -1,7 +1,5 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
 
 /**
@@ -16,7 +14,7 @@ int sum_listint(listint_t *head)
 	listint_t *pts = head;
 	size_t add = 0;
 
-	while (cursor != NULL)
+	while (pts != NULL)
 	{
 		add += pts->n;
 		pts = pts->next;

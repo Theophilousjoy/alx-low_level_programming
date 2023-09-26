@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
 /**
  * free_listp - A function that frees a linked list
@@ -34,7 +31,7 @@ void free_listp(listp_t **head)
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nofnodes = 0;
+	size_t nofnode = 0;
 	listp_t *hll, *nw, *sum;
 
 	hll = NULL;

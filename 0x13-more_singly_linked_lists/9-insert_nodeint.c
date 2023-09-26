@@ -1,7 +1,5 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
 /**
  * insert_nodeint_at_index - A function that returns the n node
@@ -59,7 +57,7 @@ size_t listint_len(const listint_t *h)
 	const listint_t *pts = h;
 	size_t display = 0;
 
-	while (cursor != NULL)
+	while (pts != NULL)
 	{
 		display += 1;
 		pts = pts->next;
