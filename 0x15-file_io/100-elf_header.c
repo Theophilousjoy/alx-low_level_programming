@@ -1,4 +1,4 @@
-ginclude <elf.h>
+#include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -52,7 +52,7 @@ void print_magic(unsigned char *e_ident)
 
 	printf(" Magic: ");
 
-	for (alph = 0; index < EI_NIDENT; alph++)
+	for (alph = 0; alph < EI_NIDENT; alph++)
 	{
 		printf("%02x", e_ident[alph]);
 
